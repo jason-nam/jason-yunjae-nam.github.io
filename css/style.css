@@ -13,8 +13,132 @@
     /* Define text colors */
     --heading: #374054;
     --text: #74808a;
+
+    /* Define spacing */
+    --spacing-1: 8px;
+    --spacing-2: 12px;
+    --spacing-3: 16px;
+    --spacing-4: 24px;
+
+    /* Define Border Radius */
+    --border-radius: 12px;
+
+    --font-color: #323232;
   }
 
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    color: var(--font-color);
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0 var(--spacing-3);
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-3) 0;
+}
+
+/* Navigation */
+
+.navigation-items {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+    margin-left: auto;
+}
+
+.navigation-item {
+    margin: var(--spacing-1);
+}
+
+/* About Section */
+
+.about-container {
+    display: flex;
+}
+  
+.about-text-container {
+    margin-right: var(--spacing-3);
+}
+
+/* Education */
+
+/* .education-block {
+
+}
+
+.education-date {
+
+} */
+
+/* Projects */
+
+.project-image {
+    width: 50%;
+}
+  
+.project-title h3 {
+    display: inline;
+}
+  
+details {
+    cursor: pointer;
+}
+  
+summary {
+    list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+}
+
+/* Skills */
+
+/* Styles for #skills */
+  
+#skills h2 {
+    color: #374054;
+    margin-bottom: 50px;
+}
+  
+#skills ul {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
+    text-align: center;
+}
+  
+#skills li {
+    display: inline-block;
+    margin: 7px;
+    padding: 5px 10px;
+    color: #374054;
+    background: #e7e7ea; /* Replace with the value obtained from darken($background-alt, 5%) */
+    list-style: none;
+    cursor: default;
+    font-size: 1.2em;
+}
+ 
+#skills-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
 /* Footer */
 
