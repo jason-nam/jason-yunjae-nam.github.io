@@ -1,0 +1,44 @@
+
+:root {
+    --base-color: #3498db;
+    --base-color-hover: #1b6ca8; /* Darken($base-color, 10%) */
+  
+    /* Define background colors */
+    --background: #fff;
+    --background-alt: #f2f2f5;
+  
+    /* Define border colors */
+    --border: #dcd9d9;
+  
+    /* Define text colors */
+    --heading: #374054;
+    --text: #74808a;
+  }
+
+
+/* Footer */
+
+.social {
+    text-align: center;
+}
+
+.social ul {
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+.social li {
+    display: inline-block;
+    font-size: 2em;
+    list-style: none;
+}
+
+.social a {
+    display: block;
+    color: var(--text);
+    padding: 10px;
+}
+
+.social a:hover {
+    color: var(--base-color);
+}
