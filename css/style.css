@@ -36,6 +36,16 @@ body {
     color: var(--font-color);
 }
 
+h2 {
+    font-family: "Proza Libre", sans-serif;
+    margin: 0;
+    margin-bottom: var(--spacing-2);
+}
+
+section {
+    padding: var(--spacing-3) 0;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
@@ -77,15 +87,14 @@ nav {
     margin-right: var(--spacing-3);
 }
 
-/* Education */
-
-/* .education-block {
-
+.portrait {
+    width: 300px;
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
 }
+  
 
-.education-date {
-
-} */
+/* Education */
 
 /* Projects */
 
@@ -105,33 +114,11 @@ summary {
     list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
 }
 
-/* Skills */
+.project-info {
+    margin-bottom: var(--spacing-3);
+}
 
-/* Styles for #skills */
-  
-#skills h2 {
-    color: #374054;
-    margin-bottom: 50px;
-}
-  
-#skills ul {
-    display: block;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 800px;
-    text-align: center;
-}
-  
-#skills li {
-    display: inline-block;
-    margin: 7px;
-    padding: 5px 10px;
-    color: #374054;
-    background: #e7e7ea; /* Replace with the value obtained from darken($background-alt, 5%) */
-    list-style: none;
-    cursor: default;
-    font-size: 1.2em;
-}
+/* Skills */
  
 #skills-container {
     display: flex;
@@ -139,30 +126,48 @@ summary {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
-/* Footer */
-
-.social {
-    text-align: center;
+  
+#skills-container > * {
+    font-size: 2em;
+    width: 2em;
+    margin-top: var(--spacing-1);
 }
 
-.social ul {
+/* Contact */
+
+#contact-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+  
+/* #contact-container > * {
+    font-size: 2em;
+    width: 2em;
+    margin-top: var(--spacing-1);
+} */
+
+#contact-container ul {
     margin: 5px 0 0 0;
     padding: 0;
 }
 
-.social li {
+#contact-container li {
     display: inline-block;
     font-size: 2em;
     list-style: none;
 }
 
-.social a {
+#contact-container a {
     display: block;
-    color: var(--text);
-    padding: 10px;
+    color: var(--font-color);
+    padding: 0 25px 0 0;
 }
 
-.social a:hover {
-    color: var(--base-color);
+#contact-container a:hover {
+    color: var(--text);
 }
+
+/* Footer */
+
