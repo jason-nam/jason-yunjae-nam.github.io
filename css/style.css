@@ -60,6 +60,7 @@ nav {
     display: flex;
     align-items: center;
     padding: var(--spacing-3) 0;
+    justify-content: space-between;
 }
 
 /* Navigation */
@@ -73,8 +74,48 @@ nav {
     margin-left: auto;
 }
 
-.navigation-item {
+.navigation-item a {
     margin: var(--spacing-1);
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.navigation-item a:hover {
+    color: var(--text);
+}
+
+.menu-btn {
+    display: none; /* Hide the button on larger screens */
+}
+  
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    /* Show the button on smaller screens */
+    .menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* Hide the navigation items by default */
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%; /* Change '0' to '100%' to position the dropdown below the menu button */
+        right: 0;
+        background-color: var(--background);
+        width: 60%; /* Adjust the width as needed */
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        padding: var(--spacing-3);
+        z-index: 1;
+    }
+
+    /* Show the navigation items when the menu button is clicked */
+    .menu-btn.active + .nav-menu {
+        display: block; /* Remove 'nav' from the selector */
+    }
 }
 
 /* About Section */
@@ -141,12 +182,6 @@ summary {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-  
-/* #contact-container > * {
-    font-size: 2em;
-    width: 2em;
-    margin-top: var(--spacing-1);
-} */
 
 #contact-container ul {
     margin: 5px 0 0 0;
